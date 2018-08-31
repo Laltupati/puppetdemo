@@ -10,9 +10,9 @@ Vagrant.configure("2") do |config|
   config.vm.box_check_update = false
 
 # Puppet Master or Server.
- config.vm.define "puppetserver" do |ps|
-	ps.vm.hostname = "puppetserver"
-	ps.vm.box = "geerlingguy/centos7"
+ config.vm.define "puppetmaster" do |pm|
+	pm.vm.hostname = "puppetmaster"
+	pm.vm.box = "geerlingguy/centos7"
 	config.vm.network "public_network"
 	config.vm.provider :virtualbox do |v|
      v.memory = 4096
